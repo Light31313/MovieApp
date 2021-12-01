@@ -44,7 +44,8 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@id/img_more"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/img_movie" />
+                app:layout_constraintTop_toBottomOf="@id/img_movie"
+                android:ellipsize="end"/>
 
             <ImageView
                 android:id="@+id/img_more"
