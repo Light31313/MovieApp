@@ -19,51 +19,65 @@ import retrofit2.Response
 
 class ForYouViewModel : ViewModel() {
     private val request = API.buildService(TmdbAPI::class.java)
+    // avoid add data again when rotate screen
+    private var isInitPopularMovie = false
+    private var isInitTopRatedMovie = false
+    private var isInitGenres = false
 
     val popularMovies = mutableListOf<Movie>()
     val topRatedMovies = mutableListOf<Movie>()
 
     val genres = mutableListOf<Genre>()
 
-    fun initPopularMovie(context: Context, popularMoviesAdapter: MovieAdapter){
-        val call1 = request.getPopularMovies(context.getString(R.string.api_key))
-        call1.enqueue(object : Callback<Movies> {
-            @SuppressLint("NotifyDataSetChanged")
-            override fun onResponse(call: Call<Movies>, response: Response<Movies>) {
-                if (response.isSuccessful) {
-                    response.body()?.let { popularMovies.addAll(it.results) }
-                    popularMoviesAdapter.notifyDataSetChanged()
+    fun initPopularMovie(context: Context, popularMoviesAdapter: MovieAdapter) {
+        if (!isInitPopularMovie) {
+            val call1 = request.getPopularMovies(context.getString(R.string.api_key))
+            call1.enqueue(object : Callback<Movies> {
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onResponse(call: Call<Movies>, response: Response<Movies>) {
+                    if (response.isSuccessful) {
+                        response.body()?.let { popularMovies.addAll(it.results) }
+                        popularMoviesAdapter.notifyDataSetChanged()
+                        isInitPopularMovie = true
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<Movies>, t: Throwable) {
-                Toast.makeText(context, "${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-    fun initTopRatedMovie(context: Context, topRatedMoviesAdapter: MovieAdapter){
-        val call2 = request.getTopRatedMovies(context.getString(R.string.api_key))
-        call2.enqueue(object : Callback<Movies> {
-            @SuppressLint("NotifyDataSetChanged")
-            override fun onResponse(call: Call<Movies>, response: Response<Movies>) {
-                if (response.isSuccessful) {
-                    response.body()?.let { topRatedMovies.addAll(it.results) }
-                    topRatedMoviesAdapter.notifyDataSetChanged()
+                override fun onFailure(call: Call<Movies>, t: Throwable) {
+                    Toast.makeText(context, "${t.message}", Toast.LENGTH_SHORT).show()
                 }
-            }
-
-            override fun onFailure(call: Call<Movies>, t: Throwable) {
-                Toast.makeText(context, "${t.message}", Toast.LENGTH_SHORT).show()
-            }
-
-        })
+            })
+        }
     }
 
-    fun initGenres(context: Context){
-        val genreName = context.resources.getStringArray(R.array.genres)
-        val genreUrl = context.resources.getStringArray(R.array.genreUrl)
-        for (i in genreName.indices)
-            genres.add(Genre(genreUrl[i], genreName[i]))
+    fun initTopRatedMovie(context: Context, topRatedMoviesAdapter: MovieAdapter) {
+        if (!isInitTopRatedMovie) {
+            val call2 = request.getTopRatedMovies(context.getString(R.string.api_key))
+            call2.enqueue(object : Callback<Movies> {
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onResponse(call: Call<Movies>, response: Response<Movies>) {
+                    if (response.isSuccessful) {
+                        response.body()?.let { topRatedMovies.addAll(it.results) }
+                        topRatedMoviesAdapter.notifyDataSetChanged()
+                        isInitTopRatedMovie = true
+                    }
+                }
+
+                override fun onFailure(call: Call<Movies>, t: Throwable) {
+                    Toast.makeText(context, "${t.message}", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+        }
+    }
+
+    fun initGenres(context: Context) {
+        if (!isInitGenres) {
+            val genreName = context.resources.getStringArray(R.array.genres)
+            val genreUrl = context.resources.getStringArray(R.array.genreUrl)
+            for (i in genreName.indices)
+                genres.add(Genre(genreUrl[i], genreName[i]))
+            isInitGenres = true
+        }
     }
 
 }
