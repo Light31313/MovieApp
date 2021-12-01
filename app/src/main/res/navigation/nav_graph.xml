@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_movie">
+
+    <fragment
+        android:id="@+id/nav_movie"
+        android:name="gam.trainingcourse.navigationdrawer.view.fragment.MovieFragment"
+        android:label="Google Play Movies"
+        tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/nav_book"
+        android:name="gam.trainingcourse.navigationdrawer.view.fragment.BookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" />
+    <fragment
+        android:id="@+id/nav_game"
+        android:name="gam.trainingcourse.navigationdrawer.view.fragment.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="gam.trainingcourse.navigationdrawer.view.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_music"
+        android:name="gam.trainingcourse.navigationdrawer.view.fragment.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+</navigation>

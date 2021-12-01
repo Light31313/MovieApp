@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable-v24/ic_home_black_24dp.xml" value="0.14322916666666666" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/gradient_item0.xml" value="0.14322916666666666" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.23796296296296296" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.23796296296296296" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.14375" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.23796296296296296" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.23796296296296296" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/score_background.xml" value="0.23796296296296296" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/drawable/side_nav_bar.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/content_for_you.xml" value="0.125" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_book.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_for_you.xml" value="0.264" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_game.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_geners.xml" value="0.24635416666666668" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_home2.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_movie.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_music.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_new_releases.xml" value="0.24635416666666668" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_study.xml" value="0.24635416666666668" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/fragment_top_selling.xml" value="0.24635416666666668" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/item_genre.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/item_movie.xml" value="0.264" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/menu/main.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NavigationDrawer/app/src/main/res/menu/menu_main.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
